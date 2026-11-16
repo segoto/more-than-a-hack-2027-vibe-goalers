@@ -1,6 +1,6 @@
-"""Every metric example used in aces/explained-simply/, scored by the official metric code.
+"""Every metric example in pathcrf&oth/explained-simply/cases.md, scored by the official metric code.
 
-    python aces/scripts/metric_cases.py
+    python "pathcrf&oth/scripts/metric_cases.py"
 
 Builds small synthetic label sequences (no match data, no ground truth -- every sequence here is
 invented) and scores them with evaluation/possession_metrics.py exactly as run_evaluation.py does:

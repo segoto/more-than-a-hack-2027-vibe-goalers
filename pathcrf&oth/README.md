@@ -1,4 +1,4 @@
-# `aces` — research branch
+# `pathcrf&oth` — research notes (branch `aces`)
 
 ## Purpose of this branch
 
@@ -12,16 +12,17 @@ Nothing here touches match data. Every example is synthetic and scored by the of
 
 ## What's in it
 
-| folder | for whom | what |
-|---|---|---|
-| [`explained-simply/`](explained-simply/README.md) | everyone, no background needed | spellF1 and macroF1 explained as to a five-year-old, with every example case (A1–A7, B1–B7, C1–C8) worked step by step |
-| [`findings/`](findings/) | the people building the pipeline | the technical findings, 01–05 (below) |
-| [`scripts/metric_cases.py`](scripts/metric_cases.py) | anyone | re-runs every example through the official metric code: `python aces/scripts/metric_cases.py` |
+| path | what |
+|---|---|
+| [`explained-simply/README.md`](explained-simply/README.md) | how macroF1 and spellF1 are computed, boundary behaviour, lag tolerance, design implications |
+| [`explained-simply/cases.md`](explained-simply/cases.md) | worked cases A1–A7 (single errors), B1–B7 (boundaries and matching), C1–C8 (macroF1 vs spellF1) |
+| [`findings/`](findings/) | technical findings 01–05 (below) |
+| [`scripts/metric_cases.py`](scripts/metric_cases.py) | reproduces every case with the official metric code: `python "pathcrf&oth/scripts/metric_cases.py"` |
 
 ## Findings in brief
 
 1. **The ranking metric rewards whole possessions, not frames**
-   ([findings/01](findings/01_problem_and_metrics.md)). spellF1 matches each true possession to at
+   ([explained-simply](explained-simply/README.md)). spellF1 matches each true possession to at
    most one predicted possession by temporal overlap, averaged over five strictness levels.
    - A 2 s flicker inside a 40 s possession drops spellF1 from 1.00 to 0.30.
    - A flickery output can score 0.91 per frame and 0.03 on possessions.
