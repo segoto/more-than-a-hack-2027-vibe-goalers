@@ -16,7 +16,8 @@ Nothing here touches match data. Every example is synthetic and scored by the of
 |---|---|
 | [`explained-simply/README.md`](explained-simply/README.md) | how macroF1 and spellF1 are computed, boundary behaviour, lag tolerance, design implications |
 | [`explained-simply/cases.md`](explained-simply/cases.md) | worked cases A1–A7 (single errors), B1–B7 (boundaries and matching), C1–C8 (macroF1 vs spellF1) |
-| [`findings/`](findings/) | technical findings 01–05 (below) |
+| [`framework.md`](framework.md) | **the decision framework**: how H/A/D is decided, designed to reproduce the ground-truth process (sensors → events → constrained semi-Markov decoder), parameter sources, build order |
+| [`findings/`](findings/) | technical findings 01–06 (below); 06 = second research pass (video ball detection, possession code, licences) |
 | [`scripts/metric_cases.py`](scripts/metric_cases.py) | reproduces every case with the official metric code: `python "pathcrf&oth/scripts/metric_cases.py"` |
 
 ## Findings in brief
